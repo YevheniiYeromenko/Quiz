@@ -29,6 +29,7 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //Navigate to Quiz fragment
         bStart.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_startFragment_to_quizFragment)
         }

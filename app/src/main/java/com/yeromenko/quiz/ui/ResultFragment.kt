@@ -20,8 +20,6 @@ class ResultFragment : Fragment() {
         arguments?.let {
             countResult = it.getInt(COUNT_RESULT, 111)
             countQuestions = it.getInt(COUNT_QUESTIONS, 111)
-            Log.e("TAG", "onCreate: " + countResult)
-            Log.e("TAG", "onCreate: " + countQuestions)
         }
     }
 
@@ -36,15 +34,15 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //txtResult.text = "Correct answers\n$countResult/$countQuestions"
-//        txtResult.text = resources.getString(R.string.result, countResult, countQuestions)
         txtResult.text =
             String.format(resources.getString(R.string.result), countResult, countQuestions)
 
+        //Navigate to Quiz fragment
         bAgain.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_resultFragment_to_quizFragment)
         }
 
+        //Navigate to Start fragment
         bToMain.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_resultFragment_to_startFragment)
         }
