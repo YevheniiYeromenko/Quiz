@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="start">Start</string>
+    <string name="button_next">Next</string>
+    <string name="button_again">Again</string>
+    <string name="button_to_start">To start</string>
+    <string name="result">Correct answers\n%d/%d</string>
+</resources>
